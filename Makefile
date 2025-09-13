@@ -3,8 +3,6 @@ CC=g++
 SRC=src/
 OUTPUT=./
 
-
-
 all: clean main
 
 clean: 
