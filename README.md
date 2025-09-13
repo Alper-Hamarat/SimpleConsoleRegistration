@@ -34,7 +34,7 @@ The Username and password shall be saved in a textfile in unencrypted form.
 
 ### Login
 When the user chooses login. An username and password shall be provided by the user.
-If Username and password exist and match. The user shall see a console Output you are now logged in as User X.
+If Username and password exist in login file and match. The user shall see a console Output you are now logged in as User X.
 ->Solution
 ->Print a Text to ask for Username:
 ->Get Username Input:
