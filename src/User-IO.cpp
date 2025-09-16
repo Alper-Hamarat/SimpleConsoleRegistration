@@ -4,6 +4,9 @@
 
 using namespace std;
 
+/**
+ * Print the Menu to the console
+ */
 void printMenu()
 {
     cout << "Hello Would you like to login or register?" << endl;
@@ -12,6 +15,9 @@ void printMenu()
     cout << "9: to exit" << endl;
 }
 
+/**
+ * Get the User input and return the value
+ */
 string getUserInput()
 {
     string input;
