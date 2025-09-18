@@ -21,7 +21,6 @@ void printMenu()
 string getUserInput()
 {
     string input;
-    cout << "Please make an Input:" << endl;
     cin >> input;
     return input;
 }
