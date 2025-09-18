@@ -1,18 +1,25 @@
-CC=g++
+CXX = g++
+CXXFLAGS = -Wall -Wextra -std=c++17 -Iinclude
 
-SRC=./src/
-OUTPUT=./
+SRC = src/main.cpp src/User-IO.cpp
+OBJ = $(patsubst src/%.cpp, build/%.o, $(SRC))
+TARGET = main
 
-all: clean main
+# Default rule
+all: build $(TARGET)
 
-clean: 
-	rm -f $(OUTPUT)main $(SRC)*.o
+# Linker: erstellt Binary aus den .o Dateien
+$(TARGET): $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $@ $^
 
-User-IO.o:
-	$(CC) $(SRC)User-IO.cpp -c -o $(SRC)User-IO.o
+# Regel für .o-Dateien im build/ Ordner
+build/%.o: src/%.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-main.o:
-	$(CC) $(SRC)main.cpp -c -o $(SRC)main.o
+# Ordner build/ erstellen falls nicht vorhanden
+build:
+	mkdir -p build
 
-main: main.o User-IO.o
-	$(CC) $(SRC)main.o $(SRC)User-IO.o -o $(OUTPUT)main
+# Aufräumen
+clean:
+	rm -rf build $(TARGET)
