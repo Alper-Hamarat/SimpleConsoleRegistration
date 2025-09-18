@@ -16,6 +16,7 @@
     "xstring": "cpp",
     "utility": "cpp",
     "fstream": "cpp",
-    "array": "cpp"
+    "array": "cpp",
+    "ostream": "cpp"
   }
 }

@@ -19,8 +19,8 @@ array<string, 2> getLoginCredentials(string username)
     // ==============================
     ifstream loginFile(fullPath);  
     if (!loginFile.is_open()) {
-        // If the file cannot be opened, throw an error
-        throw runtime_error("Could not open file: " + fullPath);
+        // Print error message to console
+        cerr << "No Username and Passwords habe been found " << endl;
     }
 
     // ==============================
