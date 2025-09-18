@@ -82,7 +82,6 @@ The Solution can be broken down into the following Modules, with the following o
 ->printMenu()
 ->getUserInput()
 -Auth-Model contains Registration and Login Operations
-->matchText()
 ->getLoginCredentials()
 ->addLoginCredetnails()
 ->checkLoginCredentials()
