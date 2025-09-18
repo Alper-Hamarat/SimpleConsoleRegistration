@@ -42,3 +42,12 @@ bool addLoginCredentials(string username, string password);
  *          false on failure
  */
 bool checkLoginCredentials(string username, string password);
+
+
+/**
+ * Check If username exists.
+ * @param username The username
+ * @returns true if success
+ *          false on failure
+ */
+bool checkUsernameExists (string username);
