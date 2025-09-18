@@ -2,6 +2,12 @@
 
 using namespace std;
 
+//The path to the login file
+static string filepath = "./";
+//The name of the login file
+static string filename = "login-credentials.txt";
+//The location and filename to thefile
+extern string fullPath;
 /**
  * Helper function to match two texts
  * @param textOne The first text
@@ -13,6 +19,7 @@ bool matchText(string textOne, string textTwo);
 /**
  * Return password and username from username input.
  * @param username The username
+ * @throws runtime_error
  * @returns Username and Password if username exists. Else an empty array
  */
 array<string, 2> getLoginCredentials(string username);
