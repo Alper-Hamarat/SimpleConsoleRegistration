@@ -90,3 +90,4 @@ The Solution can be broken down into the following Modules, with the following o
 - getLoginCredentials()
 - addLoginCredetnails()
 - checkLoginCredentials()
+- checkUsernameExists()
