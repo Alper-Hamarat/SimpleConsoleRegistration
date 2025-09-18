@@ -70,6 +70,7 @@ When we break down the bigger problems we have the following smaller problems:
 - Get login credentials
 - Add Login credentials
 - Check login credentials
+- Check if username exists
 
 ### Solution Components/Modules
 
