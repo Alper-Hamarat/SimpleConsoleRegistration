@@ -12,6 +12,8 @@
   "terminal.integrated.defaultProfile.windows": "MSYS2 UCRT64",
   "files.associations": {
     "*.ejs": "html",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "xstring": "cpp",
+    "utility": "cpp"
   }
 }

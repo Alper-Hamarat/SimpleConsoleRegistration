@@ -70,7 +70,7 @@ When we break down the bigger problems we have the following smaller problems:
 ### Solution Components/Modules
 
 The Solution can be broken down into the following Modules, with the following operations:
--File-IO contains File-Operations.
+-File-IO contains File-Operations. Here the fstream Library can be used.
 ->checkFileExists()
 ->open()
 ->create()
