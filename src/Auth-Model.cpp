@@ -52,3 +52,34 @@ array<string, 2> getLoginCredentials(string username)
     // =========================================
     return {"",""};
 }
+
+
+bool checkLoginCredentials(string username, string password)
+{
+    //Get Credentials from Username
+    array<string, 2> credentials = getLoginCredentials(username);
+    //Check if password matches username
+    if(password == credentials[1])
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool checkUsernameExists(string username)
+{
+    //Get Credentials from Username
+    array<string, 2> credentials = getLoginCredentials(username);
+    //Check if password matches username
+    if(username == credentials[0])
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
