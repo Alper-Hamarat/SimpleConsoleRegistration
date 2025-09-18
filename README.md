@@ -74,7 +74,8 @@ When we break down the bigger problems we have the following smaller problems:
 ### Solution Components/Modules
 
 The Solution can be broken down into the following Modules, with the following operations:
--File-IO contains File-Operations. Here the fstream Library can be used.
+
+#### File-IO contains File-Operations. Here the fstream Library can be used.
 
 - checkFileExists()
 - open()
@@ -83,10 +84,14 @@ The Solution can be broken down into the following Modules, with the following o
 - read()
 - readLine()
 - close()
-  -User-IO contains User-Operations.
+
+#### User-IO contains User-Operations.
+
 - printMenu()
 - getUserInput()
-  -Auth-Model contains Registration and Login Operations
+
+#### Auth-Model contains Registration and Login Operations
+
 - getLoginCredentials()
 - addLoginCredetnails()
 - checkLoginCredentials()
