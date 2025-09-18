@@ -1,6 +1,6 @@
 CC=g++
 
-SRC=src/
+SRC=./src/
 OUTPUT=./
 
 all: clean main
@@ -12,4 +12,4 @@ main.o:
 	$(CC) $(SRC)main.cpp -c -o $(SRC)main.o
 
 main: main.o
-	$(CC) $(SRC)main.o -o $(OUTPUT)main
+	$(CC) $(SRC)main.o -o $(OUTPUT)main.exe
