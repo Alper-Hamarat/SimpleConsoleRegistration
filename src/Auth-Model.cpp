@@ -42,6 +42,7 @@ array<string, 2> getLoginCredentials(string username)
         // Check if the given username matches
         // =========================================
         if (user == username) {
+            loginFile.close();
             // If yes: return username and password as array
             return {user, pass};
         }
@@ -50,6 +51,7 @@ array<string, 2> getLoginCredentials(string username)
     // =========================================
     // If no matching username found, return an empty array
     // =========================================
+    loginFile.close();
     return {"",""};
 }
 
@@ -82,4 +84,30 @@ bool checkUsernameExists(string username)
     {
         return false;
     }
+}
+
+bool addLoginCredentials(string username, string password)
+{
+    // ============================================
+    // Open the file in append mode (add at the end)
+    // ============================================
+    ofstream loginFile(fullPath, ios::app);
+    if (!loginFile.is_open()) {
+        // Could not open file -> return false
+        cerr << "Error: could not open " << fullPath << " for writing" << endl;
+        return false;
+    }
+
+    // ============================================
+    // Write "username password" into the file
+    // ============================================
+    loginFile << username << " " << password << "\n";
+
+    // Close happens automatically via RAII, but we can be explicit
+    loginFile.close();
+
+    // ============================================
+    // If we reach here, writing was successful
+    // ============================================
+    return true;
 }
