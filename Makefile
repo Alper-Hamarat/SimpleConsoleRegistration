@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++17 -Iinclude
 
-SRC = src/main.cpp src/User-IO.cpp
+SRC = src/main.cpp src/User-IO.cpp src/Auth-Model.cpp
 OBJ = $(patsubst src/%.cpp, build/%.o, $(SRC))
 TARGET = main
 
